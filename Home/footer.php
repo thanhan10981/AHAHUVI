@@ -15,7 +15,7 @@
         </div>
     <div class="footer"> 
         
-        <table>
+        <table  >
          <tr>
             <th>
                 <a href="../Home/Index.php"><img src="../IMG/logo.png" alt="logo.jpg"></a>
@@ -28,7 +28,7 @@
            <td><div class="h"></div></td>
             <td>
                 <h3> DỊCH VỤ</h3>
-                <div>
+                <div class="hieu_ung">
                     <a href="#">Điều khoản sử dụng</a> <br>
                     <a href="#">Chính sách bảo mật thông tin cá nhân</a><br>
                     <a href="#">Chính sách bảo mật thanh toán</a><br>
@@ -38,7 +38,7 @@
             </td>
             <td>
                 <h3> HỖ TRỢ</h3>
-                <div>
+                <div class="hieu_ung">
                     <a href="#">Chính sách đổi - trả - hoàn tiền</a> <br>
                     <a href="#">Chính sách bảo hành - bồi hoàn</a><br>
                     <a href="#">Chính sách vận chuyển</a><br>
@@ -47,7 +47,7 @@
             </td>
             <td>
                 <h3> HỖ TRỢ</h3>
-                <div>
+                <div class="hieu_ung">
                     <a href="#">Đăng nhập/Tạo mới tài khoản</a> <br>
                     <a href="#">Thay đổi địa chỉ khách hàng</a><br>
                     <a href="#">Chi tiết tài khoản</a><br>
@@ -58,7 +58,7 @@
          </tr>
         <tr>
             <th> 
-                <div class="bo-cong"><img  src="../IMG/logo-bo-cong-thuong.png" alt="logo-bo-cong-thuong.png"></div>
+                <div class="bo-cong"><a href="http://online.gov.vn"><img  src="../IMG/logo-bo-cong-thuong.png" alt="logo-bo-cong-thuong.png"></a></div>
                 <div class="anh-ft">
                 <br> <img src="../IMG/Facebook-on.png" alt="facebook">
                 <img src="../IMG/Youtube-on.png" alt="Youtube">
@@ -75,12 +75,12 @@
             <td>
                 <h3>LIÊN HỆ</h3>
                 <p><i class="fa-solid fa-location-dot"></i> 170 An Dương Vương, Tp. Quy Nhơn</p>
-                <p class="vnpost"><img src="../IMG/vnpost1.png" alt="vnpost1"></p>
+                <p class="vnpost"><a href="https://vnpost.vn/"><img src="../IMG/vnpost1.png" alt="vnpost1"></a></p>
              </td>
              <td>
              <h3>ㅤ</h3>
                 <p><i class="fa-solid fa-envelope"></i> cskh@ahahuvi.com.vn</p>
-                <p class="momo"><img src="../IMG/momopay.png" alt="momopay"></p>
+                <p class="momo"><a href="https://www.momo.vn/"><img src="../IMG/momopay.png" alt="momopay"></a></p>
              </td>
              <td><h3>ㅤ</h3>
              <p><i class="fa-solid fa-phone"></i> 1900636467</p>

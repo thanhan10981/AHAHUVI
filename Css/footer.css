@@ -1,157 +1,159 @@
-    .footer {
-        margin: 0 auto;
-        width: 1500px;
-        height: 500px;
-        background-color: white;
-    }
-    
-    .footer-nhan-tin {
-        width: 1500px;
-        height: 70px;
-        background-color: rgb(143, 147, 143);
-        border-radius: 5px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-    }
-    
-    .footer-nhan-tin h3 {
-        margin-right: 20px;
-        font-size: 18px;
-        display: flex;
-        align-items: center;
-        margin-right: 40px;
-        margin-left: 5px;
-    }
-    
-    .footer-nhan-tin form {
-        display: flex;
-        align-items: center;
-    }
-    
-    .footer-nhan-tin form input[type="text"] {
-        padding: 15px;
-        font-size: 16px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        margin-right: 10px;
-        width: 500px;
-    }
-    
-    .footer-nhan-tin form input[type="button"] {
-        padding: 15px 23px;
-        font-size: 16px;
-        background-color: red;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    
-    .footer-nhan-tin form input[type="button"]:hover {
-        background-color: #b89e2a;
-    }
-    
-    @media screen and (max-width: 768px) {
-        .footer table {
-            width: 100%;
-            display: block;
-        }
-        .footer td {
-            display: block;
-            width: 100%;
-            margin-bottom: 20px;
-        }
-    }
-    
+.footer {
+    margin: 0 auto;
+    width: 1500px;
+    height: 500px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer-nhan-tin {
+    width: 1500px;
+    height: 70px;
+    background-color: rgb(143, 147, 143);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.footer-nhan-tin h3 {
+    margin-right: 20px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    margin-left: 5px;
+}
+
+.footer-nhan-tin form {
+    display: flex;
+    align-items: center;
+}
+
+.footer-nhan-tin form input[type="text"] {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    width: 500px;
+}
+
+.footer-nhan-tin form input[type="button"] {
+    padding: 15px 23px;
+    font-size: 16px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.footer-nhan-tin form input[type="button"]:hover {
+    background-color: #b89e2a;
+}
+
+@media screen and (max-width: 768px) {
     .footer table {
         width: 100%;
-        max-width: 1600px;
-        margin: 0 auto;
-        text-align: left;
-    }
-    
-    .footer td {
-        vertical-align: top;
-        padding: 10px;
-    }
-    
-    .footer h3 {
-        font-size: 18px;
-        color: #333;
-        margin-bottom: 10px;
-    }
-    
-    .footer p {
-        font-size: 14px;
-        color: #555;
-    }
-    
-    .footer img {
-        width: 250px;
-    }
-    
-    .footer a {
-        font-size: 14px;
-        color: #333;
-        text-decoration: none;
-        margin-bottom: 5px;
         display: block;
     }
-    
-    .footer a:hover {
-        color: #ff6600;
-        text-decoration: underline;
+    .footer td {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
     }
-    
-    .h {
-        width: 1px;
-        height: 230px;
-        background-color: rgb(107, 105, 105);
-    }
-    
-    th {
-        text-align: center;
-    }
-    
-    .bo-cong img {
-        width: 150px;
-    }
-    
-    .anh-ft img {
-        width: 40px;
-        cursor: pointer;
-    }
-    
-    .anh-ft img:hover {
-        opacity: 0.8;
-    }
-    
-    .app img {
-        width: 120px;
-        cursor: pointer;
-    }
-    
-    .app img:hover {
-        opacity: 0.8;
-    }
-    
-    th {
-        max-width: 300px;
-        margin: 0 auto;
-    }
-    
-    .vnpost img {
-        width: 150px;
-        cursor: pointer;
-        margin-left: 100px;
-        margin-top: 20px;
-    }
-    
-    .momo img {
-        width: 70px;
-        cursor: pointer;
-        margin-left: 100px;
-        margin-top: 15px;
-    }
+}
+
+.footer table {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.footer td {
+    vertical-align: top;
+    padding: 10px;
+}
+
+.footer h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #555;
+}
+
+.footer img {
+    width: 250px;
+}
+
+.footer a {
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.h {
+    width: 1px;
+    height: 230px;
+    background-color: rgb(107, 105, 105);
+}
+
+th {
+    text-align: center;
+}
+
+.bo-cong img {
+    width: 150px;
+}
+
+.anh-ft img {
+    width: 40px;
+    cursor: pointer;
+}
+
+.anh-ft img:hover {
+    opacity: 0.8;
+}
+
+.app img {
+    width: 120px;
+    cursor: pointer;
+}
+
+.app img:hover {
+    opacity: 0.8;
+}
+
+th {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.vnpost img {
+    width: 150px;
+    cursor: pointer;
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.momo img {
+    width: 70px;
+    cursor: pointer;
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+.hieu_ung a:hover::before {
+    content: "→";
+    color: #e63200;
+    margin-right: 2px;
+}
