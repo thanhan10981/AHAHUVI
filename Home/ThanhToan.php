@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thanh Toán</title>
-    <link rel="stylesheet" href="ThanhToan.css">
-    <link rel="stylesheet" href="../AHAHUVI/header.css">
+    <link rel="stylesheet" href="../Css/ThanhToan.css">
+    <link rel="stylesheet" href="../Css/header.css">
 </head>
 <body>
     <header>
-        <?php require("../AHAHUVI/header.php") ?>
+        <?php require("../Home/header.php") ?>
     </header>
     <div class="form-container">
         <h2>Họ và tên người nhận</h2>
