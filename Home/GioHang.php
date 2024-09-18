@@ -9,13 +9,13 @@
 </head>
 <body>
     <header>
-        <?php require("../AHAHUVI/header.php") ?>
+        <?php require("../Home/header.php") ?>
     </header>
     <div class="cart-container">
         <h1>Giỏ Hàng (2 sản phẩm)</h1>
         <div class="cart-item">
             <input type="checkbox" checked name="chbox">
-            <img src="../AHAHUVI/img/Chiasetutraitim.jpg" alt="Chia se tu trai tim" border="0">
+            <img src="../IMG/Chiasetutraitim.jpg" alt="Chia se tu trai tim" border="0">
             <div class="item-info">
                 <p>Chia Sẻ Từ Trái Tim (Thích Pháp Hòa)</p>
                 <p class="price">126.000 đ <span class="old-price">168.000 đ</span></p>
@@ -31,7 +31,7 @@
 
         <div class="cart-item">
             <input type="checkbox" checked name="chbox">
-            <img src="../AHAHUVI/img/Hieuvetraitim.jpg" alt="Hieu ve trai tim" border="0">
+            <img src="../IMG/Hieuvetraitim.jpg" alt="Hieu ve trai tim" border="0">
             <div class="item-info">
                 <p>Hiểu Về Trái Tim (Tái Bản 2023)</p>
                 <p class="price">126.400 đ <span class="old-price">158.000 đ</span></p>
