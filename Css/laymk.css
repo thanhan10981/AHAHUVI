@@ -1,0 +1,122 @@
+/* Định dạng chung cho container */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Căn giữa header, form, và footer trong trang */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Cập nhật form container */
+.container-login {
+    margin-top: 8%;
+    width: 800px;
+    padding: 40px 30px; /* Padding nhiều hơn để tạo không gian */
+    box-sizing: border-box;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+    border-radius: 10px; /* Bo góc */
+    background-color: #fff; /* Màu nền trắng */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cập nhật tiêu đề trong form */
+.login-t {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #c92127; /* Màu đỏ */
+}
+
+/* Cập nhật input email */
+.input-email input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease; /* Hiệu ứng màu viền khi focus */
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.input-email input:focus {
+    border-color: #c92127; /* Đổi màu viền khi focus */
+}
+
+/* Cập nhật button */
+.btn input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #c92127;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.btn input:hover {
+    background-color: #b11e21; /* Màu tối hơn khi hover */
+}
+
+/* Liên kết "Trở về đăng nhập" */
+.text a {
+    color: #c92127;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    margin-left: 30%;
+}
+
+.text a:hover {
+    color: #b11e21; /* Màu tối hơn khi hover */
+}
+
+/* Đảm bảo bố cục responsive */
+@media (max-width: 768px) {
+    /* Căn giữa và điều chỉnh kích thước trên màn hình nhỏ */
+    .container {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container-login {
+        width: 90%; /* Giảm chiều rộng để phù hợp với màn hình nhỏ */
+        padding: 20px;
+    }
+
+    .login-t {
+        font-size: 20px;
+    }
+
+    .input-email input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .btn input {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .text a {
+        font-size: 14px;
+        
+    }
+}

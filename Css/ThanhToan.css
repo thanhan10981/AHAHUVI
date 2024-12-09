@@ -1,0 +1,172 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-container {
+    margin-top: 130px;
+    padding-top: 130px;
+    width: 60%;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    /* Bo góc để đẹp mắt */
+    margin: 20px auto;
+    color: rgba(166, 2, 2, 0.947);
+    text-align: center;
+}
+
+.form-container {
+    width: 60%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding-top: 130px;
+}
+
+h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+.payment-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: flex-start;
+}
+
+.payment-options label {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.payment-options img {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+.apply-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    display: block;
+    margin: auto;
+    width: 25%;
+}
+
+.apply-btn:hover {
+    background-color: #0056b3;
+}
+
+.submit-btn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 4px;
+}
+
+.submit-btn:hover {
+    background-color: darkred;
+}
+
+.error-msg {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    color: grey;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-row h2 {
+    flex: 1;
+    margin: 0;
+    font-size: 16px;
+}
+
+.form-row input,
+.form-row select {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    /* đảm bảo input chiếm đủ không gian */
+}
+
+.form-row h2 {
+    top: 1px;
+    flex: 1;
+    margin: 0;
+    font-size: 16px;
+    position: relative;
+    /* Thêm để di chuyển h2 */
+    top: -6px;
+}
+
+.form-row input,
+.form-row select {
+    flex: 3.5;
+    /* Tăng giá trị này để input chiếm nhiều không gian hơn */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    /* Đảm bảo input chiếm đủ không gian của flex */
+}
+
+.t-price {
+    display: block;
+    margin-left: auto;
+}

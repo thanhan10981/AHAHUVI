@@ -1,0 +1,284 @@
+.than_admin {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1520px;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.than_admin_phai {
+    margin-top: 70px;
+    margin-left: 270px;
+    margin-right: 20px;
+}
+
+
+/* Giao diện chính */
+
+.thong_tin_tai_khoan {
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+    margin-top: 30px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Nội dung */
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.info-card {
+    background: #f7f9fc;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-top: 10px solid #1A2B4C;
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.info-card h2 {
+    font-size: 1.4rem;
+    color: #007bff;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+}
+
+.info-card p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #444;
+}
+
+.info-card p strong {
+    font-weight: bold;
+    color: #222;
+}
+
+.hienthimuc {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 80%;
+    height: 30px;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    color: #1A2B4C;
+    border-radius: 7px;
+    background-color: rgb(239, 235, 235);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.09), 0px 8px 16px rgba(0, 0, 0, 0.19);
+}
+
+.hienthimuc::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 100%;
+    background-color: #f4d03f;
+    margin-right: 10px;
+}
+
+
+/* Nút chỉnh sửa */
+
+.action {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.edit-btn {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edit-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #00408b);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Ẩn form mặc định */
+
+.edit-form-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Làm nền tối hơn */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+/* Form chỉnh sửa */
+
+.edit-form {
+    background: #ffffff;
+    /* Màu nền trắng */
+    padding: 25px 30px;
+    /* Cách đều các phần tử */
+    border-radius: 12px;
+    /* Góc bo tròn mềm mại */
+    width: 400px;
+    /* Độ rộng form cố định */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    /* Đổ bóng hiện đại */
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    /* Font chữ sạch sẽ */
+}
+
+
+/* Tiêu đề */
+
+.edit-form h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #333333;
+    /* Màu chữ nổi bật */
+}
+
+
+/* Label */
+
+.edit-form label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555555;
+}
+
+
+/* Input */
+
+.edit-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 14px;
+    box-sizing: border-box;
+    /* Đảm bảo padding không phá khung */
+    transition: border-color 0.3s ease;
+    /* Hiệu ứng hover */
+}
+
+
+/* Hiệu ứng khi focus vào input */
+
+.edit-form input:focus {
+    border-color: #007bff;
+    /* Đổi màu border khi focus */
+    outline: none;
+}
+
+
+/* Khu vực nút */
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    /* Nút chia đều 2 bên */
+}
+
+
+/* Nút lưu */
+
+.save-btn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    /* Màu xanh */
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+    background-color: #218838;
+    /* Màu xanh đậm hơn khi hover */
+}
+
+
+/* Nút hủy */
+
+.cancel-btn {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    /* Màu đỏ */
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background-color: #c82333;
+    /* Màu đỏ đậm hơn khi hover */
+}
+
+
+/* Hiệu ứng form */
+
+.edit-form-container.show {
+    display: flex;
+    /* Hiện form khi cần */
+    animation: fadeIn 0.3s ease-in-out;
+    /* Hiệu ứng hiện form */
+}
+
+
+/* Hiệu ứng mờ dần */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

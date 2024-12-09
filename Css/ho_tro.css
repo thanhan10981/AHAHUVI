@@ -1,0 +1,134 @@
+/* Nút hỗ trợ */
+
+#support-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* Di chuyển sang bên phải */
+    width: 60px;
+    height: 60px;
+    background-color: #f44336;
+    /* Màu đỏ */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: transform 0.3s;
+}
+
+#support-button:hover {
+    transform: scale(1.1);
+}
+
+#support-button img {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* Form hỗ trợ */
+
+#support-form {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    /* Di chuyển sang bên phải */
+    width: 320px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    animation: fadeIn 0.3s;
+}
+
+#support-form.hidden {
+    display: none;
+}
+
+
+/* Hiệu ứng xuất hiện */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Phần đầu của form */
+
+#support-form .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#support-form .header h2 {
+    font-size: 18px;
+    margin: 0;
+    color: #f44336;
+}
+
+#support-form .header p {
+    font-size: 14px;
+    color: #666;
+}
+
+#support-form #close-form {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #f44336;
+    cursor: pointer;
+}
+
+
+/* Các thành phần form */
+
+#support-form form input,
+#support-form form select,
+#support-form form textarea,
+#support-form form button {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+#support-form form input:focus,
+#support-form form select:focus,
+#support-form form textarea:focus {
+    border-color: #f44336;
+    outline: none;
+}
+
+
+/* Nút gửi */
+
+#support-form form button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#support-form form button:hover {
+    background-color: #d32f2f;
+}

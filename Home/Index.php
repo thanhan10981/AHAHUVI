@@ -5,63 +5,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AHAHUVI.com - nhà sách trực tuyến</title>
-    <link rel="icon" href="../IMG/logo.png">
+    <link rel="icon" href="http://localhost/AHAHUVI/IMG/logo_icon.png">
     <link rel="stylesheet" href="../Css/index.css">
+    <link rel="stylesheet" href="../Css/ho_tro.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <?php require("../Home/header.php") ?>
 <div class="than-index">
-    <div class="container">
-        <?php
-        require "../Home/connect.php";
-        $sql = "SELECT ten FROM banner where vi_tri='anh-banner-chinh'";
-        $result = $conn->query($sql);
-        if ($result->num_rows > 0) {
-            echo "<div class='image-container' onmouseenter='showControls()' onmouseleave='hideControls()'>";
-            $firstImage = true;
-            $imageCount = 0;
-            while ($row = $result->fetch_assoc()) {
-                $activeClass = $firstImage ? "active" : "";
-                echo "<img src='../IMG/{$row['ten']}' alt='ảnh banner' class='{$activeClass}'>";
-                $firstImage = false;
-                $imageCount++;
-            }
-            echo "</div>";
-        } else {
-            echo "Không có dữ liệu";
-        }
-        ?>
-        <div class="dots">
+    <div class="banner-view">
+        <div class="container">
             <?php
-            for ($i = 0; $i < $imageCount; $i++) {
-                echo "<span class='dot' onclick='chuyenAnh($i)'></span>";
+            require "../Home/connect.php";
+            $sql = "SELECT ten FROM quang_cao where vi_tri='anh-quang_cao-chinh'";
+            $result = $conn->query($sql);
+            if ($result->num_rows > 0) {
+                echo "<div class='image-container' onmouseenter='showControls()' onmouseleave='hideControls()'>";
+                $firstImage = true;
+                $imageCount = 0;
+                while ($row = $result->fetch_assoc()) {
+                    $activeClass = $firstImage ? "active" : "";
+                    echo "<img src='../IMG/{$row['ten']}' alt='ảnh banner' class='{$activeClass}'>";
+                    $firstImage = false;
+                    $imageCount++;
+                }
+                echo "</div>";
+            } else {
+                echo "Không có dữ liệu";
             }
             ?>
+            <div class="dots">
+                <?php
+                for ($i = 0; $i < $imageCount; $i++) {
+                    echo "<span class='dot' onclick='chuyenAnh($i)'></span>";
+                }
+                ?>
+            </div>
+            <button class="prev" onclick="chuyenAnhTruoc()">
+                <span><</span>
+            </button>
+            <button class="next" onclick="chuyenAnhSau()">
+                <span>></span>
+            </button>
         </div>
-        <button class="prev" onclick="chuyenAnhTruoc()">
-            <span><</span>
-        </button>
-        <button class="next" onclick="chuyenAnhSau()">
-            <span>></span>
-        </button>
-    </div>
-    <div class="banner-voucher">
-        <p>
-            <?php  //ảnh phía trên
-            $sql1 = "SELECT ten FROM banner where vi_tri='anh-banner-voucher1'";
-            $result1 = $conn->query($sql1);
-            $row1 = $result1->fetch_assoc();
-            echo "<a href='#'><img src='../IMG/{$row1['ten']}' alt='ảnh banner voucher'></a>";
-            ?>
-        </p>
-        <p>
-            <?php  //ảnh phía dưới
-            $sql2 = "SELECT ten FROM banner where vi_tri='anh-banner-voucher2'";
-            $result2 = $conn->query($sql2);
-            $row2 = $result2->fetch_assoc();
-            echo "<a href='#'><img src='../IMG/{$row2['ten']}' alt='ảnh banner voucher'></a>";
-            ?>
-        </p>
+
+        <div class="banner-voucher">
+            <p>
+                <?php  //ảnh phía trên
+                $sql1 = "SELECT ten FROM quang_cao where vi_tri='anh-quang_cao-giam_gia1'";
+                $result1 = $conn->query($sql1);
+                $row1 = $result1->fetch_assoc();
+                echo "<a href='#'><img src='../IMG/{$row1['ten']}' alt='ảnh banner voucher'></a>";
+                ?>
+            </p>
+            <p>
+                <?php  //ảnh phía dưới
+                $sql2 = "SELECT ten FROM quang_cao where vi_tri='anh-quang_cao-giam_gia2'";
+                $result2 = $conn->query($sql2);
+                $row2 = $result2->fetch_assoc();
+                echo "<a href='#'><img src='../IMG/{$row2['ten']}' alt='ảnh banner voucher'></a>";
+                ?>
+            </p>
+
+        </div>
+
+        </table>
     </div>
     <div class="icon-list">
         <div class="icon-item">
@@ -93,244 +100,301 @@
         <div class="icon_danh_muc">Sản Phẩm Giảm Giá</div>
         <div class="product-carousel">
             <div class="product-container">
-                <div class="product-card">
-                    <a href="#">
-                        <img src="../IMG/bienmoithuthanhtien.png" alt="bienmoithuthanhtien">
-                        <h3>Biến Mọi Thứ Thành Tiền</h3>
-                        <div class="price">
-                            <span class="current-price">75.600 đ</span>
-                            <span class="old-price">168.000 đ</span>
-                        </div>
-                        <div class="discount">-55%</div>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <a href="#">
-                        <img src="../IMG/balochonggu.png" alt="Ba Lô Chống Gù">
-                        <h3>Ba Lô Chống Gù Spider-Man</h3>
-                        <div class="price">
-                            <span class="current-price">872.000 đ</span>
-                            <span class="old-price">1.090.000 đ</span>
-                        </div>
-                        <div class="discount">-20%</div>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <a href="#">
-                        <img src="../IMG/sotayphatgiao.png" alt="Sổ Tay Biểu Tượng Phật Giáo">
-                        <h3>Sổ Tay Biểu Tượng Phật Giáo</h3>
-                        <div class="price">
-                            <span class="current-price">227.500 đ</span>
-                            <span class="old-price">350.000 đ</span>
-                        </div>
-                        <div class="discount">-35%</div>
-                    </a>
-                </div>
-
-                <div class="product-card">
-                    <a href="#">
-                        <img src="../IMG/bienmoithuthanhtien.png" alt="Thai Giáo">
-                        <h3>Thai Giáo - Phương Pháp Dạy Con Từ Trong Bụng Mẹ </h3>
-                        <div class="price">
-                            <span class="current-price">96.200 đ</span>
-                            <span class="old-price">148.000 đ</span>
-                        </div>
-                        <div class="discount">-35%</div>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <a href="#">
-                        <img src="../IMG/bienmoithuthanhtien.png" alt="Thai Giáo">
-                        <h3>Thai Giáo - Phương Pháp Dạy Con Từ Trong Bụng Mẹ </h3>
-                        <div class="price">
-                            <span class="current-price">96.200 đ</span>
-                            <span class="old-price">148.000 đ</span>
-                        </div>
-                        <div class="discount">-35%</div>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <a href="#">
-                        <img src="../IMG/bienmoithuthanhtien.png" alt="Thai Giáo">
-                        <h3>Thai Giáo - Phương Pháp Dạy Con Từ Trong Bụng Mẹ </h3>
-                        <div class="price">
-                            <span class="current-price">96.200 đ</span>
-                            <span class="old-price">148.000 đ</span>
-                        </div>
-                        <div class="discount">-35%</div>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <a href="#">
-                        <img src="../IMG/bienmoithuthanhtien.png" alt="Thai Giáo">
-                        <h3>Thai Giáo - Phương Pháp Dạy Con Từ Trong Bụng Mẹ </h3>
-                        <div class="price">
-                            <span class="current-price">96.200 đ</span>
-                            <span class="old-price">148.000 đ</span>
-                        </div>
-                        <div class="discount">-35%</div>
-                    </a>
-                </div>
-                <div class="product-card">
-                    <a href="#">
-                        <img src="../IMG/bienmoithuthanhtien.png" alt="Thai Giáo">
-                        <h3>Thai Giáo - Phương Pháp Dạy Con Từ Trong Bụng Mẹ </h3>
-                        <div class="price">
-                            <span class="current-price">96.200 đ</span>
-                            <span class="old-price">148.000 đ</span>
-                        </div>
-                        <div class="discount">-35%</div>
-                    </a>
-                </div>
+                <?php
+                require "../Home/connect.php";
+                $sql_sp_gg = "SELECT id_sp, ten_sp, anh_bia, phan_tram, gia, gia_giam FROM san_pham WHERE phan_tram > 0";
+                $result_sp_gg = $conn->query($sql_sp_gg);
+                if ($result_sp_gg->num_rows > 0) {
+                    while ($row = $result_sp_gg->fetch_assoc()) {
+                        echo '
+                    <div class="product-card">
+                        <a href="../Home/productDetail.php?id_sp=' . $row["id_sp"] . '">
+                            <img src="../IMG/' . $row["anh_bia"] . '" alt="ảnh">
+                            <h3>' . $row["ten_sp"] . '</h3>
+                            <div class="price">
+                                <span class="current-price">' . number_format($row["gia_giam"], 0, ',', '.') . ' đ</span>
+                                <span class="old-price">' . number_format($row["gia"], 0, ',', '.') . ' đ</span>
+                            </div>
+                            <div class="discount">-' . $row["phan_tram"] . '%</div>
+                        </a>
+                    </div>';
+                    }
+                }
+                ?>
 
             </div>
-
         </div>
     </div>
     <div class="menu-container">
         <div class="menu-header">
             <img src="https://img.icons8.com/ios-filled/50/000000/menu-2.png" alt="Menu icon">
-            <span>DANH MỤC SẢN PHẨM</span>
+            <span class="danh">Danh mục sản phẩm</span>
         </div>
         <div class="product-list">
             <div class="product-item">
-                <img src="../IMG/long_den.png" alt="Lồng Đèn">
-                <p>Lồng Đèn</p>
+                <a href="../Home/allproduct.php?danhmuc_id=1">
+                    <img src="../IMG/SGK24.png" alt="SGK 2024">
+                    <p>SGK 2024</p>
+                </a>
             </div>
             <div class="product-item">
-                <img src="../IMG/binh_nuoc.png" alt="Bình Nước">
-                <p>Bình Nước</p>
+                <a href="../Home/allproduct.php?danhmuc_id=3">
+                    <img src="../IMG/kinhte-1.png" alt="Bài Học Kinh Doanh">
+                    <p>Bài Học Kinh Doanh</p>
+                </a>
             </div>
             <div class="product-item">
-                <img src="../IMG/board_game_1.png" alt="Boardgame">
-                <p>Boardgame</p>
+                <a href="../Home/allproduct.php?danhmuc_id=1">
+                    <img src="../IMG/van_hoc.png" alt="Văn Học">
+                    <p>Văn Học</p>
+                </a>
             </div>
             <div class="product-item">
-                <img src="../IMG/SGK24.png" alt="SGK 2024">
-                <p>SGK 2024</p>
+                <a href="../Home/allproduct.php?danhmuc_id=5">
+                    <img src="../IMG/goc-nho-cua-nang.png" alt="Sách tô màu">
+                    <p>Sách Tô Màu</p>
+                </a>
             </div>
             <div class="product-item">
-                <img src="../IMG/dam_my.png" alt="Đam Mỹ">
-                <p>Đam Mỹ</p>
+                <a href="../Home/allproduct.php?danhmuc_id=4">
+                    <img src="../IMG/tam_ly_ky_nang.png" alt="Tâm Lý Kỹ Năng">
+                    <p>Tâm Lý Kỹ Năng</p>
+                </a>
             </div>
             <div class="product-item">
-                <img src="../IMG/van_hoc.png" alt="Văn Học">
-                <p>Văn Học</p>
+                <a href="../Home/allproduct.php?danhmuc_id=5">
+                    <img src="../IMG/thieu_nhi.png" alt="Thiếu Nhi">
+                    <p>Thiếu Nhi</p>
+                </a>
             </div>
             <div class="product-item">
-                <img src="../IMG/tam_ly_ky_nang.png" alt="Tâm Lý Kỹ Năng">
-                <p>Tâm Lý Kỹ Năng</p>
+                <a href="../Home/allproduct.php?danhmuc_id=7">
+                    <img src="../IMG/sach_hoc_ngoai_ngu.png" alt="Sách Học Ngoại Ngữ">
+                    <p>Sách Học Ngoại Ngữ</p>
+                </a>
             </div>
             <div class="product-item">
-                <img src="../IMG/thieu_nhi.png" alt="Thiếu Nhi">
-                <p>Thiếu Nhi</p>
+                <a href="../Home/allproduct.php?danhmuc_id=8">
+                    <img src="../IMG/ngoai-van.png" alt="Ngoại Văn">
+                    <p>Ngoại Văn</p>
+                </a>
             </div>
-            <div class="product-item">
-                <img src="../IMG/sach_hoc_ngoai_ngu.png" alt="Sách Học Ngoại Ngữ">
-                <p>Sách Học Ngoại Ngữ</p>
-            </div>
-            <!-- <div class="product-item">
-                <img src="../IMG/ngoai-van.png" alt="Ngoại Văn">
-                <p>Ngoại Văn</p>
-            </div> -->
         </div>
     </div>
     <div class="book-section">
         <h2 class="section-title">
-        <span class="icon"><i class="fa-solid fa-book" style="color: #d34545;"></i></span>
-            Tủ Sách Nổi Bật
+            <span class="icon"><i class="fa-solid fa-book" style="color: #d34545;"></i></span>
+            Tủ sách nổi bật
         </h2>
         <div class="book-container">
             <div class="book-item">
-                <img src="../IMG/so-tay-ngu-phap.png" alt="Take note! Ngắn gọn - Dễ học">
-                <p>Take note! Ngắn gọn - Dễ học</p>
+                <a href="../Home/allproduct.php?danhmuc_id=7">
+                    <img src="../IMG/so-tay-ngu-phap.png" alt="Take note! Ngắn gọn - Dễ học">
+                    <p>Take note! Ngắn gọn - Dễ học</p>
+                </a>
             </div>
             <div class="book-item">
-                <img src="../IMG/song-ngu-thieu-nhi.png" alt="Song ngữ Thiếu nhi">
-                <p>Song ngữ Thiếu nhi</p>
+                <a href="../Home/allproduct.php?danhmuc_id=2">
+                    <img src="../IMG/song-ngu-thieu-nhi.png" alt="Song ngữ Thiếu nhi">
+                    <p>Song ngữ Thiếu nhi</p>
+                </a>
             </div>
             <div class="book-item">
-                <img src="../IMG/ehon-nhat-ban.png" alt="Ehon Nhật Bản">
-                <p>Ehon Nhật Bản</p>
+                <a href="../Home/allproduct.php?danhmuc_id=5">
+                    <img src="../IMG/ehon-nhat-ban.png" alt="Ehon Nhật Bản">
+                    <p>Ehon Nhật Bản</p>
+                </a>
             </div>
             <div class="book-item">
-                <img src="../IMG/to-mau-cam-xuc.png" alt="Tô màu cảm xúc">
-                <p>Tô màu cảm xúc</p>
+                <a href="../Home/allproduct.php?danhmuc_id=2">
+                    <img src="../IMG/to-mau-cam-xuc.png" alt="Tô màu cảm xúc">
+                    <p>Tô màu cảm xúc</p>
+                </a>
             </div>
             <div class="book-item">
-                <img src="../IMG/tu-duy-sieu-viet.png" alt="Tư duy siêu việt">
-                <p>Tư duy siêu việt</p>
+                <a href="../Home/allproduct.php?danhmuc_id=3">
+                    <img src="../IMG/tu-duy-sieu-viet.png" alt="Tư duy siêu việt">
+                    <p>Tư duy siêu việt</p>
+                </a>
             </div>
             <div class="book-item">
-                <img src="../IMG/nghe-thuat-MKT.png" alt="Nghệ thuật MKT">
-                <p>Nghệ thuật MKT</p>
+                <a href="../Home/allproduct.php?danhmuc_id=3">
+                    <img src="../IMG/nghe-thuat-MKT.png" alt="Nghệ thuật MKT">
+                    <p>Nghệ thuật MKT</p>
+                </a>
             </div>
             <div class="book-item">
-                <img src="../IMG/dau-tu-tuong-lai.png" alt="Đầu tư tương lai">
-                <p>Đầu tư tương lai</p>
+                <a href="../Home/allproduct.php?danhmuc_id=3">
+                    <img src="../IMG/dau-tu-tuong-lai.png" alt="Đầu tư tương lai">
+                    <p>Đầu tư tương lai</p>
+                </a>
             </div>
             <div class="book-item">
-                <img src="../IMG/chua_lanh_noi_dau.png" alt="Chữa lành tâm hồn">
-                <p>Chữa lành tâm hồn</p>
+                <a href="../Home/allproduct.php?danhmuc_id=4">
+                    <img src="../IMG/chua_lanh_noi_dau.png" alt="Chữa lành tâm hồn">
+                    <p>Chữa lành tâm hồn</p>
+                </a>
             </div>
         </div>
     </div>
     <div class="ranking-section">
-        <h1>Bảng xếp hạng bán chạy tuần</h1>
-        <div class="tabs">
+        <h1>Bảng xếp hạng bán chạy </h1>
+        <!-- <div class="tabs">
             <ul>
-                <li class="active">Văn học</li>
-                <li>Kinh Tế</li>
-                <li>Tâm lý - Kỹ năng sống</li>
-                <li>Thiếu nhi</li>
-                <li>Sách học ngoại ngữ</li>
-                <li>Foreign books</li>
-                <li>Thể loại khác</li>
+                <li class="active"> Xếp </li>
+                <li class="active"> Hạng </li>
+                <li class="active"> Sản </li>
+                <li class="active"> Phẩm </li>
+                <li class="active"> Được </li>
+                <li class="active"> Yêu </li>
+                <li class="active"> Thích </li>
+                <li class="active"> Nhất </li>
             </ul>
-        </div>
-
+        </div> -->
         <div class="content">
             <div class="left">
-                <div class="book-item-1">
-                    <span class="rank">01</span>
-                    <img src="../IMG/goc-nho-cua-nang.png" alt="Góc Nhỏ Có Nắng">
-                    <div class="book-info">
-                        <h3>Góc Nhỏ Có Nắng</h3>
-                        <p>Little Rainbow</p>
-                        <p>4334 điểm</p>
-                    </div>
-                </div>
-                <div class="book-item-1">
-                    <span class="rank">02</span>
-                    <img src="../IMG/to-binh-yen-hanh-phuc.png" alt="Tô Bình Yên Về Hạnh Phúc">
-                    <div class="book-info">
-                        <h3>Tô Bình Yên Về Hạnh Phúc (Tái Bản 2022)</h3>
-                        <p>Kulzsc</p>
-                        <p>1837 điểm</p>
-                    </div>
-                </div>
-                
-            </div>
+                <?php
+                require('../Home/connect.php');
 
-            <div class="right">
-                <img src="../IMG/goc-nho-cua-nang.png" alt="Góc Nhỏ Có Nắng">
-                <div class="book-details">
-                    <h2>Góc Nhỏ Có Nắng</h2>
-                    <p>Tác giả: Little Rainbow</p>
-                    <p>Nhà xuất bản: Thanh Niên</p>
-                    <p class="price">55,760 đ <span class="original-price">68,000 đ</span> <span class="discount">-18%</span></p>
-                    <div class="description">
-                        <p>- Với 30 chủ đề tô màu phong phú đa dạng, mỗi bức tranh như là một lời thư thả tâm tình gửi đến bạn</p>
-                        <p>- Thư giãn và chữa lành: Với những hình ảnh đẹp mắt và đơn giản, tô màu sẽ là một phương pháp hiệu quả giúp bạn chữa lành và nuôi dưỡng tâm hồn</p>
-                        <p>- Khám phá sự sáng tạo: Bạn đừng ngại vẽ thêm, tô thêm màu sắc để thể hiện cảm xúc của riêng mình</p>
-                        <p>- Chất liệu giấy dày, mịn, đẹp sẽ đem đến cho bạn trải nghiệm tô màu thú vị</p>
+                $sql_sp = " SELECT sp.id_sp, sp.ten_sp, sp.gia, sp.anh_bia, SUM(spdm.sl) AS total_sold
+                FROM san_pham_dat_mua AS spdm
+                JOIN san_pham AS sp ON spdm.id_sp = sp.id_sp
+                GROUP BY sp.id_sp
+                ORDER BY total_sold DESC
+                LIMIT 5 ";
+              
+                $result = mysqli_query($conn, $sql_sp);
+                $ii = 1;
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo '
+                <div class="book-item-1" onclick="loadProductDetails(' . $row['id_sp'] . ')">
+                    <span class="rank">' . $ii . '</span>
+                    <img src="../IMG/' . $row['anh_bia'] . '" alt="' . $row['ten_sp'] . '">
+                    <div class="book-info">
+                        <h3>' . $row['ten_sp'] . '</h3>
+                        <p>' . number_format($row['gia'], 0, ',', '.') . ' VND</p>
+                        <p>' . $row['total_sold'] * 10 . ' điểm</p>
                     </div>
+                </div>';
+                    $ii++;
+                }
+                ?>
+            </div>
+            <?php
+                    $sql_sp2 = "
+                    SELECT 
+                        sp.id_sp, 
+                        sp.ten_sp, 
+                        sp.gia, 
+                        sp.anh_bia, 
+                        sp.tac_gia, 
+                        sp.nha_xb, 
+                        COALESCE(sp.gia_giam, sp.gia) AS gia_giam, 
+                        COALESCE(sp.phan_tram, 0) AS phan_tram, 
+                        sp.mo_ta, 
+                        COALESCE(SUM(spdm.sl), 0) AS total_sold
+                    FROM 
+                        san_pham_dat_mua AS spdm
+                    RIGHT JOIN 
+                        san_pham AS sp ON spdm.id_sp = sp.id_sp
+                    GROUP BY 
+                        sp.id_sp
+                    ORDER BY 
+                        total_sold DESC
+                    LIMIT 1";
+                
+              
+                    $result1 = mysqli_query($conn, $sql_sp2);
+                    $row = mysqli_fetch_assoc($result1);
+
+                    echo '<div class="right" id="right-section"> <a href="../Home/productDetail.php?id_sp='.$row['id_sp'].'">
+                    <img id="product-image" src="../IMG/' . $row['anh_bia'] . '" alt="Product Image"></a>
+                    <div class="book-details">
+                        <h2 id="product-name">' . $row['ten_sp'] . '</h2>
+                        <p id="product-author">Tác giả: ' . $row['tac_gia'] . '</p>
+                        <p id="product-publisher">Nhà xuất bản: ' . $row['nha_xb'] . '</p>
+                        <p class="price">
+                            <span id="product-price"class="price">' . number_format($row['gia_giam'], 0, ',', '.') . 'đ</span>';
+
+                    if (!empty($row['gia_giam'])) {
+                        echo '<span id="original-price"class="original-price">' . number_format($row['gia'], 0, ',', '.') . 'đ</span>';
+                    }
+                    if (!empty($row['phan_tram'])) {
+                        echo '<span id="discount">-' . $row['phan_tram'] . '%</span>';
+                    }
+
+                    echo '</p>
+                <div class="description" id="product-description">' . $row['mo_ta'] . '</div>
+            </div>
+        </div>';
+                    ?>
+
+        </div>
+        <script src="../Js/xep_hang_right.js"></script>
+    </div>
+    <div class="main-container">
+        <div class="section-header">
+            <h3>Manga nổi bật</h3>
                 </div>
+        <div class="items-grid">
+            <div class="item-card">
+                <div class="stock-label">Sắp Có Hàng</div>
+                <img src="../IMG/duoc-su.png" alt="Dược Sư">
+                <p>Combo Sách Dược Sư Tự Sự - Tập 12 (Manga) + Tập 5 (Light Novel)</p>
+                <div class="pricing-info">
+                    <span class="current-price">157.150 đ</span>
+                    <span class="old-price">172.000 đ</span>
+                    <span class="discount-label">-8%</span>
+                </div>
+                <p>Đã bán 127</p>
+            </div>
+            <div class="item-card">
+                <div class="stock-label">Sắp Có Hàng</div>
+                <img src="../IMG/duoc-su.png" alt="Dược Sư">
+                <p>[Manga] Dược Sư Tự Sự - Tập 12 - Tặng Kèm Standee Ivory + Bìa 2 in 1</p>
+                <div class="pricing-info">
+                    <span class="current-price">44.650 đ</span>
+                    <span class="old-price">47.000 đ</span>
+                    <span class="discount-label">-5%</span>
+                </div>
+                <p>Đã bán 180</p>
+            </div>
+            <div class="item-card">
+                <div class="stock-label">Sắp Có Hàng</div>
+                <img src="../IMG/duoc-su.png" alt="One Piece">
+                <p>Combo Manga - One Piece - Tập 103 - Bản Bìa Áo + Limited Edition</p>
+                <div class="pricing-info">
+                    <span class="current-price">153.750 đ</span>
+                    <span class="old-price">155.000 đ</span>
+                    <span class="discount-label">-1%</span>
+                </div>
+                <p>Đã bán 159</p>
+            </div>
+            <div class="item-card">
+                <div class="stock-label">Sắp Có Hàng</div>
+                <img src="../IMG/duoc-su.png" alt="One Piece">
+                <p>Combo Manga - One Piece - Tập 103 - Chiến Binh Giải Phóng - Bìa Áo</p>
+                <div class="pricing-info">
+                    <span class="current-price">150.900 đ</span>
+                    <span class="old-price">152.000 đ</span>
+                    <span class="discount-label">-1%</span>
+                </div>
+                <p>Đã bán 89</p>
+            </div>
+            <div class="item-card">
+                <div class="stock-label">Sắp Có Hàng</div>
+                <img src="../IMG/duoc-su.png" alt="One Piece">
+                <p>One Piece - Tập 103 - Chiến Binh Giải Phóng - Limited Edition</p>
+                <div class="pricing-info">
+                    <span class="current-price">130.000 đ</span>
+                </div>
+                <p>Đã bán 240</p>
             </div>
         </div>
     </div>
 </div>
-
+<script src="../js/ho_tro.js"></script>
+<?php require("../Home/ho_tro.php") ?>
 <div class="mau_body"></div>
 <script src="../js/banner.js"></script>
 <?php require("../Home/footer.php") ?>

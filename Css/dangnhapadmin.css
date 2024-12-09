@@ -1,0 +1,114 @@
+    body {
+        background-image: url("https://phongvu.vn/cong-nghe/wp-content/uploads/2020/11/119234579_169457918065236_755533166268046471_n-1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .container {
+        width: 1000px;
+        height: 500px;
+        background-color: white;
+        border-radius: 20px;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    
+    .footer {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        position: relative;
+        top: 70px;
+        font-weight: bold;
+    }
+    
+    .container-login {
+        margin-left: 500px;
+        margin-top: 100px;
+    }
+    
+    .login-tieude {
+        text-align: center;
+    }
+    
+    .index {
+        width: 500px;
+        margin: 0 auto;
+    }
+    
+    .login-t,
+    .user-input,
+    .pasword-input,
+    .btn,
+    .pas-v {
+        margin-bottom: 20px;
+    }
+    
+    .input-user,
+    .input1-password,
+    .btn input {
+        width: 60%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    
+    .btn input {
+        background-color: yellow;
+        color: black;
+        cursor: pointer;
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .btn input:hover {
+        background-color: #0056b3;
+    }
+    
+    .login-t {
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+    }
+    
+    .txt2 {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .pas-v a {
+        text-decoration: none;
+        margin-left: 170px;
+    }
+    
+    .login-p {
+        max-width: 5px;
+        max-height: 5px;
+        object-fit: cover;
+    }
+    
+    .toggle-password {
+        position: absolute;
+        top: 45%;
+        right: 110px;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+    
+    .toggle-password i {
+        color: #777;
+        font-size: 15px;
+    }
+    
+    .toggle-password i:hover {
+        color: #333;
+    }
+    
+    .toggle-password i.active {
+        color: #777;
+        text-decoration: line-through;
+    }

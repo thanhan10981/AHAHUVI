@@ -1,0 +1,93 @@
+body {
+    background-image: url("https://phongvu.vn/cong-nghe/wp-content/uploads/2020/11/119234579_169457918065236_755533166268046471_n-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    width: 1000px;
+    height: 500px;
+    background-color: white;
+    border-radius: 20px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.footer {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    position: relative;
+    top: 60px;
+    font-weight: bold;
+}
+
+.txt2 {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+.container-login {
+    margin-left: 500px;
+    margin-top: -200px;
+}
+
+.login-tieude {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.input-email,
+.login-t,
+.btn,
+.text {
+    margin-bottom: 20px;
+}
+
+.input {
+    width: 49%;
+    padding: 16px;
+    border: 1px solid #5f5c5c;
+    border-radius: 5px;
+    outline: none;
+    background-color: #eae5e5;
+}
+
+.login-t {
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-size: 30px;
+}
+
+.btn input {
+    background-color: yellow;
+    color: black;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    width: 56%;
+    padding: 14px;
+    border-radius: 5px;
+}
+
+.btn input:hover {
+    background-color: #0056b3;
+}
+
+.login-t {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.login-p img {
+    max-width: 50%;
+    max-height: 50%;
+    margin-left: 50px;
+}

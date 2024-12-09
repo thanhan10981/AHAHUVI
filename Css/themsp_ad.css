@@ -1,0 +1,135 @@
+.than_admin {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1520px;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+#as4 {
+    background-color: #2da5c4;
+}
+
+.than_admin_phai {
+    margin-top: 70px;
+    margin-left: 270px;
+    margin-right: 20px;
+}
+
+.hienthimuc {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 80%;
+    height: 30px;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    color: #1A2B4C;
+    border-radius: 7px;
+    background-color: rgb(239, 235, 235);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.09), 0px 8px 16px rgba(0, 0, 0, 0.19);
+}
+
+.hienthimuc::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 100%;
+    background-color: #f4d03f;
+    margin-right: 10px;
+}
+
+form {
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 40px;
+    color: #1A2B4C;
+}
+
+.nhom-dau-vao {
+    width: 90%;
+    margin-left: 4%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nhom-dau-vao label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.nhom-dau-vao input,
+.nhom-dau-vao select,
+.nhom-dau-vao textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+option {
+    background-color: #dad8d8;
+    color: #1A2B4C;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.nut-bieu-mau {
+    margin-left: 60%;
+    grid-column: span 2;
+    display: flex;
+    gap: 10px;
+}
+
+.nut-bieu-mau button {
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 90px;
+    height: 30px;
+    color: #f4f7fe;
+    font-size: 10px;
+    border: none;
+    border-radius: 7px;
+    background-color: #4CAF50;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 0 4px rgba(26, 43, 76, 0.4);
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+form button[type="button"] {
+    color: #fff;
+}
+
+.hien-thi-anh,
+.hien-thi-anh-nhieu {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+
+.khung-anh {
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 60px;  /* Kích thước cố định của khung */
+    height: 60px; /* Kích thước cố định của khung */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    overflow: hidden;  /* Ẩn phần vượt ra ngoài khung */
+    display: flex;
+    justify-content: center; /* Canh giữa ảnh trong khung */
+    align-items: center; /* Canh giữa ảnh trong khung */
+}
+
+.khung-anh img {
+    width: 100%;  /* Đảm bảo ảnh sẽ co giãn theo chiều rộng của khung */
+    height: 100%; /* Đảm bảo ảnh sẽ co giãn theo chiều cao của khung */
+    object-fit: cover;  /* Đảm bảo ảnh không bị méo mà vừa khung */
+}

@@ -1,0 +1,208 @@
+.my-form input {
+    font-weight: normal;
+}
+
+.form-container.active label {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.form-container label {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.submit-btn {
+    background-color: #d3d3d3;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    margin-right: 300px;
+}
+
+.submit-btn {
+    background-color: red;
+    cursor: pointer;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: darkred;
+    /* Darkens the red on hover */
+}
+
+.auth-container .nav-links {
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.nav-links {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.auth-container .nav-links a {
+    color: black;
+    /* Default color */
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+}
+
+button .enabled {
+    background-color: red;
+}
+
+.form-container button {
+    border-radius: 10px;
+    padding: 8px 0;
+    width: 260px;
+    margin-left: 60px;
+    border: none;
+    margin-top: 10px;
+}
+
+.form-container {
+    display: none;
+}
+
+.form-container.active input {
+    margin-bottom: 15px;
+    /* Tăng khoảng cách giữa các input */
+    border-radius: 5px;
+    width: 386px;
+    /* Sửa chiều rộng thành 100% cho khớp với container */
+    height: 39px;
+    border: 1px solid #ccc;
+}
+
+.form-container.active {
+    margin-top: 50px;
+    display: block;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container form input {
+    margin-bottom: 20px;
+    width: 100px;
+    padding: 10px;
+}
+
+.toggle {
+    text-align: right;
+    margin-top: 10px;
+    cursor: pointer;
+    color: red;
+    text-align: center;
+    margin-left: 60px;
+}
+
+.toggle a {
+    color: red !important;
+    text-decoration: none !important;
+    /* Bỏ gạch chân mặc định */
+}
+
+.forgot-password {
+    color: red;
+    cursor: pointer;
+}
+
+.auth-container {
+    width: 800px;
+    padding: 20px;
+    box-sizing: border-box;
+    /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); */
+    border-radius: 10px;
+    margin: 0 auto;
+    background-color: white;
+    margin-top: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Chiều cao tối thiểu là toàn màn hình */
+    font-family: Arial, sans-serif;
+    margin-bottom: 30px;
+}
+
+.nav-links a {
+    color: black;
+    /* Màu mặc định */
+    text-decoration: none;
+    position: relative;
+}
+
+.nav-links a.active {
+    color: #c92127;
+    /* Màu đỏ khi active */
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-container input {
+    width: 100%;
+    padding-right: 90px;
+    /* Tạo khoảng trống để không đè lên nút OTP */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links hr {
+    width: 60%;
+    margin: 5px auto 0;
+    border: 1px solid #c92127;
+}
+
+.auth-container .nav-links a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+}
+
+.auth-container .nav-links a.active {
+    color: #c92127;
+    /* Màu đỏ cho liên kết active */
+    font-weight: bold;
+}
+
+.auth-container .nav-links a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #c92127;
+    /* Gạch chân đỏ */
+}
+
+#login-form {
+    margin: 0 auto;
+    margin-left: 200px;
+}
+
+.form-container {
+    margin: 0 auto;
+    margin-left: 200px;
+}

@@ -5,16 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../Css/footer.css">
 </head>
-<body><div class="footer-nhan-tin">
-        <i class="fa-regular fa-envelope fa-lg"> </i>
-            <h3> ĐĂNG KÝ NHẬN BẢN TIN</h3>
-            <form action="#">
-                <input type="text" placeholder="Nhập địa chỉ email của bạn">
-                <input type="button" value="Đăng ký">
-            </form>
-        </div>
+<body>
     <div class="footer"> 
-        
         <table  >
          <tr>
             <th>
@@ -29,30 +21,29 @@
             <td>
                 <h3> DỊCH VỤ</h3>
                 <div class="hieu_ung">
-                    <a href="#">Điều khoản sử dụng</a> <br>
-                    <a href="#">Chính sách bảo mật thông tin cá nhân</a><br>
-                    <a href="#">Chính sách bảo mật thanh toán</a><br>
-                    <a href="#">Giới thiệu AHAHUVI</a><br>
-                    <a href="#">Hệ thống trung tâm - nhà sách</a><br>
+                    <a href="../Home/about_ahahuvi.php?tab=dkdv">Điều khoản sử dụng</a> <br>
+                    <a href="../Home/about_ahahuvi.php?tab=csbm">Chính sách bảo mật thông tin cá nhân</a><br>
+                    <a href="../Home/about_ahahuvi.php?tab=csbmtt">Chính sách bảo mật thanh toán</a><br>
+                    <a href="../Home/about_ahahuvi.php?tab=gt">Giới thiệu AHAHUVI</a><br>
+    
                 </div>
             </td>
             <td>
                 <h3> HỖ TRỢ</h3>
                 <div class="hieu_ung">
-                    <a href="#">Chính sách đổi - trả - hoàn tiền</a> <br>
-                    <a href="#">Chính sách bảo hành - bồi hoàn</a><br>
-                    <a href="#">Chính sách vận chuyển</a><br>
-                    <a href="#">Chính sách khách sỉ</a><br>
+                    <a href="../Home/about_ahahuvi.php?tab=csdtht">Chính sách đổi - trả - hoàn tiền</a> <br>
+                    <a href="../Home/about_ahahuvi.php?tab=csbhbh">Chính sách bảo hành - bồi hoàn</a><br>
+                    <a href="../Home/about_ahahuvi.php?tab=csvc">Chính sách vận chuyển</a><br>
+                    <a href="../Home/about_ahahuvi.php?tab=csksi">Chính sách khách sỉ</a><br>
                 </div>
             </td>
             <td>
-                <h3> HỖ TRỢ</h3>
+                <h3> TÀI KHOẢN CỦA TÔI</h3>
                 <div class="hieu_ung">
-                    <a href="#">Đăng nhập/Tạo mới tài khoản</a> <br>
-                    <a href="#">Thay đổi địa chỉ khách hàng</a><br>
-                    <a href="#">Chi tiết tài khoản</a><br>
-                    <a href="#">Chi tiết tài khoản</a><br>
-                    <a href="#">Lịch sử mua hàng</a><br>
+                    <a href="../Home/login.php">Đăng nhập/Tạo mới tài khoản</a> <br>
+                    <a href="../Home/account.php?tabs=tdcm">Thay đổi địa chỉ khách hàng</a><br>
+                    <a href="../Home/account.php?tabs=hscn">Chi tiết tài khoản</a><br>
+                    <a href="../Home/account.php?tabs=order">Lịch sử mua hàng</a><br>
                 </div>
             </td>
          </tr>

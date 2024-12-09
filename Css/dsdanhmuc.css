@@ -1,0 +1,223 @@
+.than_admin {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1520px;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+#as4 {
+    background-color: #2da5c4;
+}
+
+.than_admin_phai {
+    margin-top: 70px;
+    margin-left: 270px;
+    margin-right: 20px;
+}
+
+.hienthimuc {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 80%;
+    height: 30px;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    color: #1A2B4C;
+    border-radius: 7px;
+    background-color: rgb(239, 235, 235);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.09), 0px 8px 16px rgba(0, 0, 0, 0.19);
+}
+
+.hienthimuc::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 100%;
+    background-color: #f4d03f;
+    margin-right: 10px;
+}
+
+.search_form {
+    display: flex;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.search_form input[type="text"] {
+    flex-grow: 1;
+    padding: 6px 12px;
+    font-size: 14px;
+    border: 1px solid #dad8d8;
+    border-radius: 30px 0 0 30px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search_form button {
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #1A2B4C;
+    color: #fff;
+    border: 1px solid #1A2B4C;
+    border-left: none;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search_form button i {
+    font-size: 14px;
+}
+
+.search_form input[type="text"]:focus {
+    border-color: #1A2B4C;
+    box-shadow: 0 0 4px rgba(26, 43, 76, 0.4);
+}
+
+.search_form button:hover {
+    background-color: #2da5c4;
+    border: #2da5c4;
+}
+
+.soluongdm {
+    font-weight: bold;
+    height: 10px;
+    color: #1A2B4C;
+    padding: 10px;
+    font-size: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: rgb(239, 235, 235);
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 0 4px rgba(26, 43, 76, 0.4);
+    width: 8%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.bang_sp {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    font-size: 10px;
+}
+
+.danhmuctrai {
+    margin-top: 20px;
+    max-width: 80%;
+    max-height: 300px;
+    overflow: auto;
+    border: none;
+    margin-left: 110px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.09), 0px 8px 16px rgba(0, 0, 0, 0.19);
+    position: relative;
+}
+
+.bang_sp thead {
+    position: sticky;
+    top: 0; /* Đặt vị trí của thead cố định ở trên cùng */
+    z-index: 10; /* Đảm bảo thead luôn nằm trên các dòng trong tbody */
+}
+.bang_sp thead tr {
+    background-color: #1A2B4C;
+    color: #ffffff;
+    text-align: left;
+}
+
+.bang_sp th,
+.bang_sp td {
+    padding: 12px;
+    text-align: center;
+}
+
+.bang_sp thead th:first-child {
+    border-top-left-radius: 8px;
+}
+
+.bang_sp thead th:last-child {
+    border-top-right-radius: 8px;
+}
+
+.bang_sp tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.bang_sp tbody tr:last-of-type {
+    border-bottom: none;
+}
+
+.bang_sp i {
+    color: #1A2B4C;
+    margin-left: 5px;
+}
+
+.highlight {
+    background-color: #f0f0f0;
+}
+
+.danhmuctraiphai {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.danhmucphai form {
+    font-size: 12px;
+    gap: 10px;
+    padding: 40px;
+    color: #1A2B4C;
+}
+
+.nhom-dau-vao {
+    width: 70%;
+    margin-left: 13%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nhom-dau-vao label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.nhom-dau-vao input,
+.nhom-dau-vao select,
+.nhom-dau-vao textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 10px;
+}
+
+.nut-bieu-mau {
+    margin-top: 20px;
+    grid-column: span 2;
+    display: flex;
+    gap: 10px;
+}
+
+.nut-bieu-mau button {
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 90px;
+    height: 30px;
+    color: #f4f7fe;
+    font-size: 10px;
+    border: none;
+    border-radius: 7px;
+    background-color: #4CAF50;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 0 4px rgba(26, 43, 76, 0.4);
+    margin-top: 7px;
+    margin-left: 40px;
+}
+
+.nut-bieu-mau {
+    margin-left: 12%;
+}

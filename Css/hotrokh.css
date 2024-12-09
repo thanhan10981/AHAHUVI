@@ -1,0 +1,319 @@
+#as9 {
+    background-color: #2da5c4;
+}
+
+.sua {
+    background-color: white;
+    border: none;
+}
+
+.than_admin {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1520px;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.than_admin_phai {
+    margin-top: 70px;
+    margin-left: 270px;
+    margin-right: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.section {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 45%;
+    padding: 15px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.section-header h2 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.table th,
+.table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #1A2B4C;
+    color: white;
+    font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.form {
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px 30px;
+    /* border: 1px solid #ddd; */
+    /* border-radius: 8px; */
+    background-color: #ffffff;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    font-family: Arial, sans-serif;
+}
+
+
+/* Label */
+
+.form label {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+
+/* Input, Select */
+
+.form input[type="text"],
+.form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+
+/* Hover và focus */
+
+.form input[type="text"]:focus,
+.form select:focus {
+    border-color: #007BFF;
+    background-color: #ffffff;
+    outline: none;
+}
+
+
+/* Select */
+
+.form select {
+    cursor: pointer;
+}
+
+
+/* Nút gửi */
+
+.form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+
+/* Thông điệp lỗi (nếu có) */
+
+.form .error {
+    color: red;
+    font-size: 14px;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.total {
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: right;
+    color: #333;
+}
+
+.trang_thai {
+    margin-right: 35%;
+    margin-top: 17px;
+    font-size: 16px;
+}
+
+.btn,
+.btn-delete {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.btn {
+    background-color: #06e324;
+    color: white;
+    width: 90px;
+    height: 30px;
+}
+
+.button-actions {
+    margin-top: 10px;
+    margin-left: 70%;
+}
+
+.btn-delete {
+    background-color: #06e324;
+    color: white;
+    font-size: 12px;
+    width: 60px;
+    height: 30px;
+}
+
+.hotrokh {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    height: 30px;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    color: #1A2B4C;
+    border-radius: 7px;
+    background-color: rgb(239, 235, 235);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.09), 0px 8px 16px rgba(0, 0, 0, 0.19);
+}
+
+.hotrokh::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 100%;
+    background-color: #f4d03f;
+    margin-right: 10px;
+}
+
+.search_form {
+    display: flex;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.search_form input[type="text"] {
+    flex-grow: 1;
+    padding: 6px 12px;
+    font-size: 14px;
+    border: 1px solid #dad8d8;
+    border-radius: 30px 0 0 30px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search_form button {
+    padding: 6px 12px;
+    font-size: 14px;
+    background-color: #1A2B4C;
+    color: #fff;
+    border: 1px solid #1A2B4C;
+    border-left: none;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search_form button i {
+    font-size: 14px;
+}
+
+.search_form input[type="text"]:focus {
+    border-color: #1A2B4C;
+    box-shadow: 0 0 4px rgba(26, 43, 76, 0.4);
+}
+
+.search_form button:hover {
+    background-color: #2da5c4;
+    border: #2da5c4;
+}
+
+.bang_ht {
+    width: 1228px;
+    border-collapse: collapse;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.09), 0px 8px 16px rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+}
+
+.bang_ht thead tr {
+    background-color: #1A2B4C;
+    color: #ffffff;
+    text-align: left;
+}
+
+.bang_ht th,
+.bang_ht td {
+    padding: 12px;
+    text-align: center;
+}
+
+.bang_ht thead th:first-child {
+    border-top-left-radius: 8px;
+}
+
+.bang_ht thead th:last-child {
+    border-top-right-radius: 8px;
+}
+
+.bang_ht tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.bang_ht tbody tr:last-of-type {
+    border-bottom: none;
+}
+
+.bang_ht i {
+    color: #1A2B4C;
+    margin-left: 5px;
+}
+
+.table-container {
+    max-width: 100%;
+    max-height: 400px;
+    overflow: auto;
+    border: 1px solid #ddd;
+}

@@ -1,49 +1,55 @@
 .footer {
     margin: 0 auto;
-    width: 1500px;
-    height: 500px;
+    width: 100%;
+    max-width: 1500px;
+    /* Đảm bảo không vượt quá 1500px */
+    height: auto;
+    /* Tự động thay đổi chiều cao */
     background-color: white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .footer-nhan-tin {
-    width: 1500px;
+    width: 100%;
+    max-width: 1500px;
     height: 70px;
     background-color: rgb(143, 147, 143);
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    margin-top: 20px;
+    margin: 20px auto 0 auto;
+    gap: 20px;
+    /* Thêm khoảng cách giữa các phần tử con */
 }
 
 .footer-nhan-tin h3 {
-    margin-right: 20px;
-    font-size: 18px;
+    font-size: 1.2em;
     display: flex;
     align-items: center;
-    margin-right: 40px;
-    margin-left: 5px;
+    margin-right: 10px;
+    /* Thêm khoảng cách bên phải của tiêu đề */
 }
 
 .footer-nhan-tin form {
     display: flex;
     align-items: center;
+    gap: 15px;
+    /* Thêm khoảng cách giữa các phần tử trong form */
 }
 
 .footer-nhan-tin form input[type="text"] {
     padding: 15px;
-    font-size: 16px;
+    font-size: 1em;
     border-radius: 5px;
     border: 1px solid #ccc;
-    margin-right: 10px;
     width: 500px;
+    max-width: 100%;
 }
 
-.footer-nhan-tin form input[type="button"] {
+.footer-nhan-tin form input[type="submit"] {
     padding: 15px 23px;
-    font-size: 16px;
+    font-size: 1em;
     background-color: red;
     color: white;
     border: none;
@@ -51,25 +57,15 @@
     cursor: pointer;
 }
 
-.footer-nhan-tin form input[type="button"]:hover {
+.footer-nhan-tin form input[type="submit"]:hover {
     background-color: #b89e2a;
 }
 
-@media screen and (max-width: 768px) {
-    .footer table {
-        width: 100%;
-        display: block;
-    }
-    .footer td {
-        display: block;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
+
+/* Định dạng các phần tử con trong footer */
 
 .footer table {
     width: 100%;
-    max-width: 1600px;
     margin: 0 auto;
     text-align: left;
 }
@@ -80,18 +76,20 @@
 }
 
 .footer h3 {
-    font-size: 18px;
+    font-size: 1.2em;
     color: #333;
     margin-bottom: 10px;
 }
 
 .footer p {
-    font-size: 14px;
+    font-size: 1em;
     color: #555;
 }
 
 .footer img {
-    width: 250px;
+    width: 100%;
+    max-width: 250px;
+    /* Giới hạn chiều rộng tối đa */
 }
 
 .footer a {
@@ -112,7 +110,8 @@ th {
 }
 
 .bo-cong img {
-    width: 150px;
+    width: 100%;
+    max-width: 150px;
 }
 
 .anh-ft img {
@@ -125,7 +124,8 @@ th {
 }
 
 .app img {
-    width: 120px;
+    width: 100%;
+    max-width: 120px;
     cursor: pointer;
 }
 
@@ -139,14 +139,16 @@ th {
 }
 
 .vnpost img {
-    width: 150px;
+    width: 100%;
+    max-width: 150px;
     cursor: pointer;
     margin-left: 100px;
     margin-top: 20px;
 }
 
 .momo img {
-    width: 70px;
+    width: 100%;
+    max-width: 70px;
     cursor: pointer;
     margin-left: 100px;
     margin-top: 15px;
@@ -156,4 +158,29 @@ th {
     content: "→";
     color: #e63200;
     margin-right: 2px;
+}
+
+
+/* Điều chỉnh cho màn hình nhỏ */
+
+@media screen and (max-width: 768px) {
+    .footer-nhan-tin form input[type="text"] {
+        width: 100%;
+        /* Đầy đủ chiều rộng trên màn hình nhỏ */
+    }
+    .footer-nhan-tin form input[type="button"] {
+        width: auto;
+    }
+    .footer table {
+        display: block;
+    }
+    .footer td {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .vnpost img,
+    .momo img {
+        margin-left: 0;
+    }
 }

@@ -1,0 +1,42 @@
+    .body_about {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 1500px;
+        height: 100%;
+        background-color: rgb(255, 255, 255);
+        margin-top: 130px;
+        padding: 20px;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        text-align: justify;
+    }
+    
+    .ten_muc {
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    ul {
+        padding-left: 0;
+        list-style-position: inside;
+    }
+    
+    ul li {
+        text-indent: 30px;
+        /* Thụt vào cho nội dung */
+    }
+    
+    .iden {
+        padding-left: 0;
+        text-indent: 30px;
+    }
+    
+    .anh_doi_tra {
+        width: 1400px;
+        height: auto;
+    }
+    
+    .anh-si {
+        width: 1470px;
+    }

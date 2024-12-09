@@ -1,0 +1,143 @@
+.than_admin {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1520px;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.than_admin_phai {
+    margin-top: 70px;
+    margin-left: 270px;
+    margin-right: 20px;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.filter-section h2 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.filters {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-item label {
+    font-size: 14px;
+    color: rgb(14, 14, 14);
+    margin-bottom: 5px;
+}
+
+#as1 {
+    background-color: #2da5c4;
+}
+
+.filter-item select,
+.filter-item input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #1A2B4C;
+    color: white;
+}
+
+.filter-item select option {
+    background-color: #eee;
+    color: black;
+}
+
+.report-section {
+    display: flex;
+    gap: 20px;
+}
+
+.chart,
+.list {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.chart h3,
+.list h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.bar-chart {
+    display: flex;
+    gap: 10px;
+}
+
+.bar {
+    width: 30%;
+    background-color: #4caf50;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 5px 5px 0 0;
+    font-size: 14px;
+}
+
+.list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.list li {
+    font-size: 14px;
+    color: #555;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.list li:last-child {
+    border-bottom: none;
+}
+
+.chart {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 500px;
+    /* Limits the chart width */
+    margin: 0 auto;
+    /* Centers the chart */
+    text-align: center;
+}
+
+.chart h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#top_x_div {
+    width: 100%;
+    /* Makes chart responsive */
+    height: 300px;
+    /* Adjusts chart height */
+}
